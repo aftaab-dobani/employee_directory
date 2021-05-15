@@ -8,26 +8,27 @@ import EmployeeTable from "./EmployeeTable";
 // Phone
 // Email
 
-class EmployeeData extends Component {
+class default class Body extends Component {
     state = {
         employee: [],
-        search: "",
-        filteredEmployee: []
+        filteredEmployee: [],
     }
 }; 
 
-headings = [
-    { name: "Image", width: "10%" },
-    { name: "Name", width: "10%" },
-    { name: "Phone", width: "10%" },
-    { name: "Email", width: "10%" },
-  ];
+// headings = [
+//     { name: "Image", width: "10%" },
+//     { name: "Name", width: "10%" },
+//     { name: "Phone", width: "10%" },
+//     { name: "Email", width: "10%" },
+//   ];
 
   componentDidMount() {
-    API.getUsers().then(results => {
+    API.getEmployees().then(results => {
       this.setState({
-        users: results.data.results,
-        filteredUsers: results.data.results
+        employee: results.data.results,
+        filteredEmployee: results.data.results
       });
     });
   }
+
+ 

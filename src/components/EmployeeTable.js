@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+
+// Data to pull:
+// Thumbnail
+// Name 
+// Phone
+// Email
 
 function EmployeeTable(props) {
-    return (
+  return (
       <table className="table">
-        <thead>
-          <tr>
-            name="breed"
-            list="breeds"
-            type="text"
-            className="form-control"
-            placeholder="Type in a dog breed to begin"
-            id="breed"
-          />
-          <datalist id="breeds">
-            {props.breeds.map(breed => (
-              <option value={breed} key={breed} />
-            ))}
-          </datalist>
-          <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
-            Search
-          </button>
-        </div>
-      </form>
-    );
-  }
-  
-  export default SearchForm;
+      <thead>
+      <tr>
+        <th scope="col">Thumbnail</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+
+      </tr>
+
+      </thead>
+      <tbody results={props.results} />
+      </table>
+  );
+}
+export default EmployeeTable;
