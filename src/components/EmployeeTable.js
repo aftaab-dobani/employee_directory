@@ -21,7 +21,13 @@ function EmployeeTable(props) {
 
       {props.employees.map((employee, index) => (
           <tr key = {index}data-index={index}>
-              <td>{employee.picture.medium}</td> 
+              <td>{employee.picture.medium}
+              <img
+                  src={employee.picture.medium}
+                  alt={"image"}
+                  className="img-responsive"
+                />
+                </td> 
               <td>{employee.name.first + " " + employee.name.last}</td>
               <td>{employee.phone}</td>
               <td>{employee.email}</td>
