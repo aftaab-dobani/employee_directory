@@ -8,15 +8,15 @@ import EmployeeTable from "./EmployeeTable";
 // Email
 export default class Data extends Component {
    state = {
-       employee: [],
-       filteredEmployee: [],
+       employees: [],
+       filteredEmployees: [],
    }
 
    componentDidMount() {
     API.getEmployees().then(results => {
       this.setState({
-        employee: results.data.results,
-        filteredEmployee: results.data.results
+        employees: results.data.results,
+        filteredEmployees: results.data.results
       }, () => {console.log(this.state)});
     });
 
@@ -25,7 +25,7 @@ export default class Data extends Component {
 
   render(){
       return(
-          <EmployeeTable employee= {this.state.employee}/>
+          <EmployeeTable employees= {this.state.employees}/>
       )
   }
 };

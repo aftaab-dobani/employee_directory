@@ -9,7 +9,7 @@ import React, { Component } from "react";
 function EmployeeTable(props) {
 
   return (
-      <table className="table">
+      <table className="table table-bordered">
       <thead>
       <tr>
         <th scope="col">Thumbnail</th>
@@ -19,12 +19,12 @@ function EmployeeTable(props) {
 
       </tr>
 
-      {Employee.map((Employee)) => (
-          <tr data-index={index}>
-              <td>{Employee.picture}</td>
-              <td>{Employee.name}</td>
-              <td>{Employee.phone}</td>
-              <td>{Employee.email}</td>
+      {props.employees.map((employee, index) => (
+          <tr key = {index}data-index={index}>
+              <td>{employee.picture.medium}</td> 
+              <td>{employee.name.first + " " + employee.name.last}</td>
+              <td>{employee.phone}</td>
+              <td>{employee.email}</td>
           </tr>
      
       ))}
