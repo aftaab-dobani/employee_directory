@@ -23,4 +23,15 @@ function EmployeeTable(props) {
       </table>
   );
 }
+
+// const Employee = ({ employee }) => {
+//     return (
+//         <tr>
+//             <th scope="row">
+//                 <img
+//                 src={employee.picture.small}
+//             </th>
+//         </tr>
+//     )
+// }
 export default EmployeeTable;
