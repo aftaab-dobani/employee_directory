@@ -17,8 +17,10 @@ export default class Data extends Component {
       this.setState({
         employee: results.data.results,
         filteredEmployee: results.data.results
-      });
+      }, () => {console.log(this.state)});
     });
+
+    
   }
 
   render(){
@@ -34,3 +36,4 @@ export default class Data extends Component {
 //     { name: "Email", width: "10%" },
 //   ];
  
+// export default Data; 

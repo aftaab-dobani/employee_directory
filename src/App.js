@@ -10,6 +10,7 @@ function App() {
     
         <Header />
         <Searchbar />
+        <Data />
       
      
     </div>
