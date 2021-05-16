@@ -12,7 +12,7 @@ function EmployeeTable(props) {
       <table className="table table-bordered">
       <thead>
       <tr>
-        <th scope="col">Thumbnail</th>
+        <th scope="col">Picture</th>
         <th scope="col">Name</th>
         <th scope="col">Phone</th>
         <th scope="col">Email</th>
@@ -21,11 +21,11 @@ function EmployeeTable(props) {
 
       {props.employees.map((employee, index) => (
           <tr key = {index}data-index={index}>
-              <td>{employee.picture.medium}
+              <td>
               <img
                   src={employee.picture.medium}
                   alt={"image"}
-                  className="img-responsive"
+                  
                 />
                 </td> 
               <td>{employee.name.first + " " + employee.name.last}</td>
