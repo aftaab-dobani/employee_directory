@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./components/Header"
-import Searchbar from "./components/Searchbar"
-import Data from "./components/Data"
+import Header from "./components/Header/Header"
+import Searchbar from "./components/Searchbar/Searchbar"
+import Data from "./components/Data/Data"
 import "./App.css";
 
 function App() {

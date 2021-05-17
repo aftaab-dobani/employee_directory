@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./style.css"
 
 // Data to pull:
 // Thumbnail
@@ -21,13 +22,7 @@ function EmployeeTable(props) {
 
       {props.employees.map((employee, index) => (
           <tr key = {index}data-index={index}>
-              <td>
-              <img
-                  src={employee.picture.medium}
-                  alt={"image"}
-                  
-                />
-                </td> 
+              <td><img src={employee.picture.medium} alt={"image"}/></td> 
               <td>{employee.name.first + " " + employee.name.last}</td>
               <td>{employee.phone}</td>
               <td>{employee.email}</td>

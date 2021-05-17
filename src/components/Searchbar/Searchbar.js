@@ -1,14 +1,17 @@
 import React from "react";
 
-function Searchbar() {
+
+function Searchbar(props) {
   return (
     <div className="searchbar">
       <form className="form-inline">
         <input
+          value={props.employee}
+          onChange={props.handleInputChange}
+          name="search"
+          type="text"
           className="form-control"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
+          placeholder="Search for employee"
         />
       </form>
     </div>

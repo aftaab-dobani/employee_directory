@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import API from "../utils/API";
-import EmployeeTable from "./EmployeeTable";
+import API from "../../utils/API";
+import EmployeeTable from "../EmployeeTable/EmployeeTable";
 // Data to pull:
 // Thumbnail
 // Name
@@ -11,6 +11,8 @@ export default class Data extends Component {
        employees: [],
        filteredEmployees: [],
    }
+
+   
 
    componentDidMount() {
     API.getEmployees().then(results => {
