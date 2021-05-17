@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import EmployeeTable from "../EmployeeTable/EmployeeTable";
+import Searchbar from "../Searchbar/Searchbar"
 // Data to pull:
 // Thumbnail
 // Name
@@ -10,7 +11,8 @@ export default class Data extends Component {
    state = {
        employees: [],
        filteredEmployees: [],
-   }
+       employee: "",
+      }
 
    
 
@@ -25,9 +27,16 @@ export default class Data extends Component {
     
   }
 
+  handleInputChange = (event) => {
+    this.setState({employee: event.target.value});
+  }
+
   render(){
       return(
-          <EmployeeTable employees= {this.state.employees}/>
+        <>
+          <Searchbar handleInputChange = {this.handleInputChange}></Searchbar>
+          <EmployeeTable employees= {this.state.employees.filter(value => value.name.first.includes(this.state.employee) )}/>
+        </>
       )
   }
 };
